@@ -1,0 +1,65 @@
+{
+  "manifest_version": 3,
+  "name": "Trello-Groups",
+  "description": "Create groups that are listed vertically in Trello",
+  "version": "0.0.1",
+  "icons": {
+    "64": "icons/icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/trelloGroup.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+
+
+  ],
+  "background": {
+    "scripts": [
+      "background_script.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content_script.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "*://trello.com/b/*",
+    "tabs",
+    "storage",
+    "scripting"
+  ],
+
+  "action": {
+    "default_icon": {
+      "64": "icons/icon.png"
+    },
+    "default_popup": "browserAction/index.html",
+    "default_title": "Trello-Groups"
+  },
+
+
+  "options_ui": {
+    "page": "options/index.html"
+  }, 
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"
+,
+      "strict_min_version": "42.0"
+    }
+  }
+
+
+  
+}
