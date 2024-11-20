@@ -8,3 +8,7 @@ Trello is a handy tool for keeping track of list items, but it limits you to a s
 * Then, add the | character  to the header of any list that should start a new swimlane. 
 * Any header text that comes after the character will be used as the lane's label. For instance, if you label a list with "Backlog for |Project X", that lane's label will read "Project X". (I recommend that you use a format like this, so that the list headers still make sense to people who don't have this extension.)
 * Titles should be limited to approximately 20 characters. Long titles will cause strange formatting of the lists, but otherwise will not break anything. 
+
+Get it for Firefox here: [https://addons.mozilla.org/en-US/firefox/addon/trello-groups/](https://addons.mozilla.org/en-US/firefox/addon/trello-groups/)
+
+Get it for Chrome here: [https://chromewebstore.google.com/detail/trello-groups/hppnbiahgpfneemhjkpmfdfloombkmnk](https://chromewebstore.google.com/detail/trello-groups/hppnbiahgpfneemhjkpmfdfloombkmnk)
