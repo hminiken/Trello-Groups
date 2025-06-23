@@ -1,24 +1,21 @@
-
-
-#board.trelloGroups{
+#board.trelloGroups {
     display: grid;
     grid-template-columns: repeat(100, 1fr);
     overflow-y: auto;
-  }
-  
-  .group-start{
+}
+
+.group-start {
     grid-column-start: 1;
-  }
+}
 
-  .group-break {
+.group-break {
     display: none;
-  }
+}
 
-#board.trelloGroups > [data-testid="list-wrapper"]
-{
-  margin: 0px;
-  height: auto;
-  padding: 6px;
+#board.trelloGroups > [data-testid="list-wrapper"] {
+    margin: 0px;
+    height: auto;
+    padding: 6px;
 }
 
 #board.trelloGroups > [data-testid="list-wrapper"].group-item:before {
@@ -31,7 +28,7 @@
     min-height: 1em;
     padding: .25em 1em .2em .5em;
     font-size: 1.2em;
-    color: rgba(0,0,0,0);
+    color: rgba(0, 0, 0, 0);
 }
 
 #board.trelloGroups > [data-testid="list-wrapper"].group-start:before {
@@ -46,7 +43,47 @@
     font-size: 1.2em;
     color: #eee;
     border-top-left-radius: 5px;
-    background: linear-gradient(to right, rgba(49, 49, 49, 0.7) 0% , rgba(49, 49, 49, 0.5) 70%, rgba(49, 49, 49, 0.0) 100%);
+    background: linear-gradient(to right, rgba(49, 49, 49, 0.7) 0%, rgba(49, 49, 49, 0.5) 70%, rgba(49, 49, 49, 0.0) 100%);
+    /* background: red; */
+}
+
+.group-hidden {
+    display: none !important;
+}
+.group-start [data-testid="list-name"] {
+  cursor: pointer;
+  position: relative;
+  padding-left: 18px;
+}
+
+.group-start [data-testid="list-name"]::before {
+  content: '▼';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.group-start[data-group-collapsed="true"] [data-testid="list-name"]::before {
+  content: '▶';
 }
 
 
+.list-cards {
+  /* Ensure the container can be hidden */
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.list-cards[style*="display: none"] {
+  /* Explicitly hide when JS sets display:none */
+  display: none !important;
+}
+
+.group-collapsed [data-testid="list-cards"] {
+  display: none !important;
+}
+
+
+.hidden {
+  display: none !important;
+}
